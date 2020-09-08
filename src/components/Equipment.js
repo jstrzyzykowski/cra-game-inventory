@@ -3,12 +3,25 @@ import '../styles/Equipment.css';
 
 const Equipment = () => {
     return (
-        <div className="equipment-outer">
+        <div className="equipment-user">
             <div className="user-set">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, soluta accusantium magni voluptate repudiandae odio sunt tempore! Obcaecati possimus corporis praesentium velit a, iusto quasi nulla magni, voluptatibus, sit fugit.
+                <div className="set-main">
+                    <div className="main-head"></div>
+                    <div className="main-neck"></div>
+                    <div className="main-armor"></div>
+                    <div className="main-weapon"></div>
+                    <div className="main-shield"></div>
+                    <div className="main-belt"></div>
+                    <div className="main-boots"></div>
+                </div>
+                <div className="set-rings">
+                    <div className="rings-ring"></div>
+                    <div className="rings-ring"></div>
+                    <div className="rings-ring"></div>
+                </div>
             </div>
-            <div className="statistics">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptates suscipit repudiandae amet, fuga officiis placeat fugit molestias temporibus, ea pariatur dolorum nobis adipisci et deleniti beatae veniam minus omnis.
+            <div className="user-statistics">
+                User Statistics
             </div>
         </div>
     );
