@@ -1,9 +1,9 @@
 .equipment-user {
     display: flex;
     flex-direction: column;
-    background-color: #aaa;
+    background-color: #595652;
     width: 300px;
-    height: calc(180px + 460px + 10px);
+    height: calc(180px + 480px + 10px);
     margin: 1rem 1rem 1rem 0;
     padding: 10px;
     border: 10px solid transparent;
@@ -14,13 +14,11 @@
 .equipment-user .user-set {
     display: flex;
     flex-direction: column;
-    background-color: #888;
     height: 480px;
 }
 
 .equipment-user .user-set .set-main {
     position: relative;
-    /* background-color: cadetblue; */
     height: 390px;
 }
 
@@ -30,14 +28,15 @@
     height: 70px;
     background-color: #595651;
     background-repeat: no-repeat;
-    background-size: 60%;
     background-position: center;
     border: 10px solid transparent;
-    border-image: url('../images/item-bg-iddle.jpg') 10 round;
+    border-image: url('../images/border-slot.png') 8 round;
+    border-radius: 6px;
 }
 
 .equipment-user .user-set .set-main div {
     position: absolute;
+    background-size: 100%;
 }
 
 .equipment-user .user-set .set-main div.main-head {
@@ -50,43 +49,44 @@
 .equipment-user .user-set .set-main div.main-neck {
     top: 7%;
     right: 0;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/neck-icon.png');
     transform: translate(-20%, 50%);
 }
 
 .equipment-user .user-set .set-main div.main-armor {
     top: 27%;
     right: 50%;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/armor-icon.png');
     transform: translateX(50%);
 }
 
 .equipment-user .user-set .set-main div.main-belt {
     top: 49.5%;
     right: 50%;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/belt-icon.png');
     transform: translateX(50%);
 }
 
 .equipment-user .user-set .set-main div.main-boots {
     top: 72.5%;
     right: 50%;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/boots-icon.png');
     transform: translateX(50%);
 }
 
 .equipment-user .user-set .set-main div.main-weapon {
     top: 47%;
     left: 0;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/weapon-icon.png');
     transform: translate(20%,-50%);
 }
 
 .equipment-user .user-set .set-main div.main-shield {
     top: 47%;
     right: 0;
-    background-image: url('../images/head-icon.png');
+    background-image: url('../images/shield-icon.png');
     transform: translate(-20%, -50%);
+    
 }
 
 
@@ -99,9 +99,13 @@
 
 .equipment-user .user-set .set-rings div {
     background-image: url('../images/ring-icon.png');
+    background-size: 70%;
 }
 
 .equipment-user .user-statistics {
-    background-color: #ddd;
     flex-grow: 1;
+    box-shadow: 0 -2px 0 #313131, inset 0 2px 0 #6D6D6D;
+    padding: 5px;
+    color: rgb(180, 180, 180);
+    font-size: 1.2rem;
 }
