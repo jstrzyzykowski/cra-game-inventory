@@ -1,0 +1,8 @@
+.item-outer {
+    width: 70px;
+    height: 70px;
+    background-color: #595651;
+    border: 10px solid transparent;
+    border-image: url('../images/item-bg-iddle.jpg') 10 round;
+    border-radius: 10px;
+}

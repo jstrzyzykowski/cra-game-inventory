@@ -1,0 +1,19 @@
+.equipment-outer {
+    display: flex;
+    flex-direction: column;
+    background-color: #aaa;
+    width: 300px;
+    height: calc(180px + 460px + 10px);
+    margin: 1rem 1rem 1rem 0;
+    padding: 10px;
+}
+
+.equipment-outer .user-set {
+    background-color: #888;
+    height: 490px;
+}
+
+.equipment-outer .statistics {
+    background-color: #ddd;
+    flex-grow: 1;
+}
