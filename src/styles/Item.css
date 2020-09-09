@@ -5,6 +5,7 @@
     border: 10px solid transparent;
     border-image: url('../images/border-slot.png') 8 round;
     border-radius: 10px;
+    cursor: url('../images/cursor-pointer.png'),auto;
 }
 
 .item-outer:hover {

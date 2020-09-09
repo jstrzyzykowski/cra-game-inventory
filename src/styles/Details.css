@@ -47,7 +47,7 @@
 .details-control button {
     height: 40px;
     width: 120px;
-    cursor: pointer;
+    cursor: url('../images/cursor-pointer.png'), auto;
     background-color: transparent;
     background-image: url('../images/button-iddle.png');
     background-repeat: no-repeat;

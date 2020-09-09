@@ -67,8 +67,9 @@ class App extends Component {
     const index = itemsCopy.findIndex(item => item.id === id);
 
     const equippedItems = this.state.equippedItems;
-    equippedItems[type] = itemsCopy[index];
 
+    itemsCopy[index].active = false;
+    equippedItems[type] = itemsCopy[index];
     const items = itemsCopy.filter(item => item.id !== id);
 
     this.setState({
@@ -79,24 +80,36 @@ class App extends Component {
   }
 
   handleWearOff = item => {
+    const items = [...this.state.items];
     const equippedItems = this.state.equippedItems;
+
     equippedItems[item.type] = '';
+    items.push(item);
 
-
+    this.setState({
+      items,
+      equippedItems,
+    })
   }
 
   render() {
 
     return (
-      <div className="app">
-        <div className="right-side">
-          <Inventory items={this.state.items} click={this.handleClick} />
-          <Details items={this.state.items} activeItem={this.state.activeItem} clickEquip={this.handleClickEquip} />
+      <>
+        <div className="app">
+          <div className="right-side">
+            <Inventory items={this.state.items} click={this.handleClick} />
+            <Details items={this.state.items} activeItem={this.state.activeItem} clickEquip={this.handleClickEquip} />
+          </div>
+          <div className="left-side">
+            <Equipment equippedItems={this.state.equippedItems} clickWearOff={this.handleWearOff} />
+          </div>
         </div>
-        <div className="left-side">
-          <Equipment equippedItems={this.state.equippedItems} clickWearOff={this.handleWearOff} />
-        </div>
-      </div>
+        <footer>
+          <i class="fab fa-github"></i>
+          <p><span>Created by</span> jstrzyzykowski || <span>Designed by</span> Michele "BUCH" Buchelli</p>
+        </footer>
+      </>
     );
   }
 }
