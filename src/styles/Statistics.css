@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.8rem;
+    margin: 3px 0;
+}
+
+li p span {
+    color: rgb(21, 151, 21);
+}
+

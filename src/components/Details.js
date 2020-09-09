@@ -26,7 +26,9 @@ const Details = props => {
                     }
 
                 }}>Equip</button>
+                {/* Drop button is not programmed yet */}
                 <button>Drop</button>
+                {/* Destroy button is not programmed yet */}
                 <button>Destroy</button>
             </div>
         </div>

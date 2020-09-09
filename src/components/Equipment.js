@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Equipment.css';
 import EquipmentSlot from '../components/EquipmentSlot';
+import Statistics from '../components/Statistics';
 
 const Equipment = props => {
 
@@ -15,7 +16,7 @@ const Equipment = props => {
                 {slots}
             </div>
             <div className="user-statistics">
-                User Statistics
+                <Statistics stats={props.stats} baseStats={props.baseStats} />
             </div>
         </div>
     );

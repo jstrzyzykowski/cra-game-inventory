@@ -101,6 +101,9 @@
 
 .equipment-user .user-statistics {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 -2px 0 #313131, inset 0 2px 0 #6D6D6D;
     padding: 5px;
     color: rgb(180, 180, 180);
