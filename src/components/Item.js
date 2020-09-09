@@ -3,7 +3,7 @@ import '../styles/Item.css';
 
 const Item = props => {
 
-    const icon = require(`../images/${props.item.name}.png`);
+    const icon = require(`../images/${props.item.unique}.png`);
     const style = {
         backgroundImage: `url("${icon}")`,
         backgroundSize: 'contain',
@@ -11,7 +11,9 @@ const Item = props => {
     };
 
     return (
-        <div className="item-outer" style={style}>
+        <div className={props.item.active ? " item-outer active" : " item-outer"} style={style} onClick={() => {
+            props.click(props.item.id);
+        }}>
 
         </div>
     );

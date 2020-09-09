@@ -5,7 +5,8 @@ import ItemList from '../components/ItemList';
 const Invntory = props => {
     return (
         <div className="inventory-outer">
-            <ItemList items={props.items} />
+            {props.items.length ? <ItemList items={props.items} click={props.click} /> : <p className="msg-empty">Inventory is empty...</p>}
+
         </div>
     );
 }

@@ -1,4 +1,5 @@
 .inventory-outer {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -12,5 +13,16 @@
     border-image: url('../images/border.png') 6 round;
     border-radius: 12px;
     /* text-align: center; */
-    
+}
+
+.inventory-outer .msg-empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    font-family: 'Arcade', sans-serif;
+    color: gray;
+
 }

@@ -6,3 +6,12 @@
     border-image: url('../images/border-slot.png') 8 round;
     border-radius: 10px;
 }
+
+.item-outer:hover {
+    border-image: url('../images/slot-hover.png') 8 round;
+}
+
+.item-outer.active {
+    background-color: #847E87;
+    border-image: url('../images/slot-active.png') 8 round;
+}

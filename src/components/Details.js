@@ -1,19 +1,31 @@
 import React from 'react';
 import '../styles/Details.css';
 
-const Details = () => {
+const Details = props => {
+
     return (
-        <div className="details-outer">
+        <div className="details-outer" >
             <div className="details-info">
                 <div className="header">
-                    <p>Item name</p>
+                    <p>{!props.activeItem ? 'Choose Item' : props.activeItem.name}</p>
                 </div>
                 <div className="main">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos numquam similique asperiores dolorum vero voluptates delectus ullam dolore hic cumque.</p>
+                    <p>{!props.activeItem ? 'Here you can check information about choosed item.' : props.activeItem.desc}</p>
                 </div>
             </div>
             <div className="details-control">
-                <button>Equip</button>
+                <button onClick={() => {
+                    if (props.items.length) {
+                        if (!props.activeItem) {
+                            alert('No active item');
+                        } else {
+                            props.clickEquip(props.activeItem.id, props.activeItem.type);
+                        }
+                    } else {
+                        alert('Inventory is empty.');
+                    }
+
+                }}>Equip</button>
                 <button>Drop</button>
                 <button>Destroy</button>
             </div>

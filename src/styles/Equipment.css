@@ -12,18 +12,13 @@
 }
 
 .equipment-user .user-set {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     height: 480px;
 }
 
-.equipment-user .user-set .set-main {
-    position: relative;
-    height: 390px;
-}
-
-.equipment-user .user-set .set-main div,
-.equipment-user .user-set .set-rings div {
+.equipment-user .user-set div {
+    position: absolute;
+    background-size: 100%;
     width: 70px;
     height: 70px;
     background-color: #595651;
@@ -34,72 +29,74 @@
     border-radius: 6px;
 }
 
-.equipment-user .user-set .set-main div {
-    position: absolute;
-    background-size: 100%;
-}
-
-.equipment-user .user-set .set-main div.main-head {
-    top: 5%;
+.equipment-user .user-set div.main-head {
+    top: 3%;
     left: 50%;
     background-image: url('../images/head-icon.png');
     transform: translateX(-50%);
 }
 
-.equipment-user .user-set .set-main div.main-neck {
-    top: 7%;
+.equipment-user .user-set div.main-neck {
+    top: 4%;
     right: 0;
     background-image: url('../images/neck-icon.png');
-    transform: translate(-20%, 50%);
+    transform: translate(-10%, 50%);
 }
 
-.equipment-user .user-set .set-main div.main-armor {
-    top: 27%;
+.equipment-user .user-set div.main-armor {
+    top: 21.5%;
     right: 50%;
     background-image: url('../images/armor-icon.png');
     transform: translateX(50%);
 }
 
-.equipment-user .user-set .set-main div.main-belt {
-    top: 49.5%;
+.equipment-user .user-set div.main-belt {
+    top:40%;
     right: 50%;
     background-image: url('../images/belt-icon.png');
     transform: translateX(50%);
 }
 
-.equipment-user .user-set .set-main div.main-boots {
-    top: 72.5%;
+.equipment-user .user-set div.main-boots {
+    top: 59%;
     right: 50%;
     background-image: url('../images/boots-icon.png');
     transform: translateX(50%);
 }
 
-.equipment-user .user-set .set-main div.main-weapon {
-    top: 47%;
+.equipment-user .user-set div.main-weapon {
+    top: 37%;
     left: 0;
     background-image: url('../images/weapon-icon.png');
-    transform: translate(20%,-50%);
+    transform: translate(10%,-50%);
 }
 
-.equipment-user .user-set .set-main div.main-shield {
-    top: 47%;
+.equipment-user .user-set div.main-shield {
+    top: 37%;
     right: 0;
     background-image: url('../images/shield-icon.png');
-    transform: translate(-20%, -50%);
-    
+    transform: translate(-10%, -50%);
 }
 
-
-.equipment-user .user-set .set-rings {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.equipment-user .user-set .set-rings div {
+.equipment-user .user-set div.main-ring1 {
+    top: 100%;
+    left: 0;
     background-image: url('../images/ring-icon.png');
-    background-size: 70%;
+    transform: translate(36%, -120%);
+}
+
+.equipment-user .user-set div.main-ring2 {
+    top: 100%;
+    right: 50%;
+    background-image: url('../images/ring-icon.png');
+    transform: translate(50%, -120%);
+}
+
+.equipment-user .user-set div.main-ring3 {
+    top: 100%;
+    right: 0;
+    background-image: url('../images/ring-icon.png');
+    transform: translate(-36%, -120%);
 }
 
 .equipment-user .user-statistics {

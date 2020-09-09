@@ -14,8 +14,9 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-family: 'Arcade', sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Arcade', sans-serif;
+    /* font-family: monospace, sans-serif; */
     font-size: 10px;
 }
 
