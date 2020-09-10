@@ -60,7 +60,6 @@ class App extends Component {
   }
 
   handleClick = id => {
-
     const items = [...this.state.items];
     const index = items.findIndex(item => item.id === id);
 
@@ -81,33 +80,25 @@ class App extends Component {
   }
 
   handleClickEquip = (id, type) => {
-    // Make copy of items array from state.
     const itemsCopy = [...this.state.items];
-    // Specify index of equipping item.
     const index = itemsCopy.findIndex(item => item.id === id);
-    // Make copy of equipped items array from state.
-    const equippedItems = this.state.equippedItems;
-    // Turn off active flag from equipping item.
-    itemsCopy[index].active = false;
-    // Mount equipping item in equipped items array.
-    equippedItems[type] = itemsCopy[index];
-    // Create new items array without equipped item.
-    const items = itemsCopy.filter(item => item.id !== id);
-
+    const equippedItemsCopy = this.state.equippedItems;
+    const statisticsCopy = this.state.statistics;
     const item = itemsCopy[index];
     const itemStats = Object.keys(item.statistics);
-    const statisticsCopy = this.state.statistics;
+
+    item.active = false;
+    equippedItemsCopy[type] = item;
+    const items = itemsCopy.filter(item => item.id !== id);
 
     itemStats.forEach(itemStat => {
       statisticsCopy[itemStat] += item.statistics[itemStat];
     });
 
-
-    // Set new data in state.
     this.setState({
       items,
       activeItem: '',
-      equippedItems,
+      equippedItems: equippedItemsCopy,
       statistics: statisticsCopy,
     })
   }

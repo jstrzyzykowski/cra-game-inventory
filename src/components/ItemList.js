@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Item from '../components/Item';
 
 const ItemList = props => {
@@ -8,9 +8,9 @@ const ItemList = props => {
     ))
 
     return (
-        <Fragment>
+        <>
             {items}
-        </Fragment>
+        </>
     );
 }
 

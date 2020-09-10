@@ -14,7 +14,6 @@ const Item = props => {
         <div className={props.item.active ? " item-outer active" : " item-outer"} style={style} onClick={() => {
             props.click(props.item.id);
         }}>
-
         </div>
     );
 }
