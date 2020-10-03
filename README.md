@@ -1,4 +1,4 @@
-### Clock_v1
+## Project View
 <img src="https://github.com/jstrzyzykowski/cra-game-inventory/blob/master/img/cra-game-inventory.png" height="300">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
